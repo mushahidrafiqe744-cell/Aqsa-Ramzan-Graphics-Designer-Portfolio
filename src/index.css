@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #F6F3EB;
+    --bg-card: #ECE6D8;
+    --dark-green: #142820;
+    --darker-green: #0E1E17;
+    --gold-accent: #C99742;
+    --gold-light: #DFB260;
+    --text-primary: #1A2821;
+    --text-muted: #5C6B62;
+  }
+
+  body {
+    background-color: var(--bg-cream);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Custom Arch Frame */
+.arch-frame {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/* Dotted Matrix Background */
+.dot-matrix {
+  background-image: radial-gradient(#C99742 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+}
+
+.dot-matrix-light {
+  background-image: radial-gradient(rgba(201, 151, 66, 0.4) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+/* Keyframe Animations */
+@keyframes goldShimmer {
+  0%, 100% { opacity: 0.7; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.25) rotate(15deg); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(1.5deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 151, 66, 0.4); }
+  50% { box-shadow: 0 0 20px 4px rgba(201, 151, 66, 0.35); }
+}
+
+@keyframes numberBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-3px) scale(1.08); }
+}
+
+@keyframes letterSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleInPop {
+  0% { opacity: 0; transform: scale(0.9) translateY(10px); }
+  70% { transform: scale(1.03) translateY(-2px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes imageShine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(200%) rotate(45deg); }
+}
+
+@keyframes cardGlaze {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Animation Helper Classes */
+.animate-shimmer {
+  animation: goldShimmer 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite;
+}
+
+.animate-number-bounce {
+  animation: numberBounce 2.5s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotateSlow 24s linear infinite;
+}
+
+.animate-scale-pop {
+  animation: scaleInPop 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: letterSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Image Hover Shine Effect */
+.image-shine-container {
+  position: relative;
+  overflow: hidden;
+}
+.image-shine-container::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%) rotate(25deg);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+.image-shine-container:hover::after {
+  transform: translateX(100%) rotate(25deg);
+}
+
+/* Number badge animated styles */
+.number-badge-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.number-badge-glow:hover {
+  transform: scale(1.15) translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 151, 66, 0.4);
+}
+
+/* Stagger animation utilities */
+.stagger-1 { animation-delay: 50ms; }
+.stagger-2 { animation-delay: 100ms; }
+.stagger-3 { animation-delay: 150ms; }
+.stagger-4 { animation-delay: 200ms; }
+.stagger-5 { animation-delay: 250ms; }
+.stagger-6 { animation-delay: 300ms; }
+.stagger-7 { animation-delay: 350ms; }
+.stagger-8 { animation-delay: 400ms; }
+.stagger-9 { animation-delay: 450ms; }
