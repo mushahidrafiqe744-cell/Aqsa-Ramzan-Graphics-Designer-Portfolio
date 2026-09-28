@@ -38,17 +38,17 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Brand Logo Lockup */}
       <div 
         onClick={() => handleTabClick('home')}
-        className="cursor-pointer flex flex-col items-start select-none group"
+        className="cursor-pointer flex items-center gap-3 select-none group"
       >
-        <div className="flex items-center gap-2">
-          <span className="font-script text-3xl sm:text-4xl text-[#142820] font-normal leading-none tracking-wide group-hover:text-[#C99742] transition-colors">
+        <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#142820] border border-[#C99742]/50 p-1 flex items-center justify-center shadow-md group-hover:border-[#C99742] transition-all duration-300">
+          <AqsaLogoMark className="w-full h-full text-[#C99742]" />
+        </div>
+        <div className="flex flex-col items-start">
+          <span className="font-serif-display text-lg sm:text-xl text-[#142820] font-bold leading-none tracking-wide group-hover:text-[#C99742] transition-colors">
             Aqsa Ramzan
           </span>
-          <AqsaLogoMark className="w-6 h-6 text-[#C99742] group-hover:rotate-12 transition-transform" />
-        </div>
-        <div className="flex items-center gap-1.5 mt-0.5">
-          <span className="text-[9px] sm:text-[10px] tracking-[0.25em] font-semibold text-[#142820] uppercase">
-            GRAPHICS DESIGNER
+          <span className="text-[8px] sm:text-[9.5px] tracking-[0.25em] font-bold text-[#C99742] uppercase mt-0.5">
+            CREATIVE BRAND DESIGN
           </span>
         </div>
       </div>

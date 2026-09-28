@@ -39,7 +39,7 @@ export const AboutSection: React.FC = () => {
               <Calendar className="w-4 h-4" />
             </div>
             <span className="text-xs sm:text-[13px] text-[#E0EBE4] font-medium font-mono">
-              15/05/2025
+              20-01-2010
             </span>
           </div>
 

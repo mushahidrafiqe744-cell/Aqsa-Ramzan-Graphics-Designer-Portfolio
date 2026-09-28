@@ -65,7 +65,7 @@ export const DedicatedAboutView: React.FC<DedicatedAboutViewProps> = ({ onOpenCo
               <div>
                 <span className="text-[10px] uppercase font-bold text-[#8EA69A] block">Date of Birth</span>
                 <span className="text-xs text-[#E0EBE4] font-bold font-mono">
-                  15/05/2025
+                  20-01-2010
                 </span>
               </div>
             </div>

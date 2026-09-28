@@ -63,13 +63,43 @@ export const SmallGoldStar = ({ className = "w-3 h-3 text-[#C99742]" }: { classN
 );
 
 export const AqsaLogoMark = ({ className = "w-7 h-7" }: { className?: string }) => (
-  <svg viewBox="0 0 40 40" fill="none" className={className}>
+  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    {/* Detailed Gold Crown */}
     <path
-      d="M8 28C14 18 26 12 32 10M32 10C30 16 26 22 20 26M32 10C34 14 32 20 28 24M22 14C24 18 22 24 16 26"
-      stroke="#C99742"
-      strokeWidth="2"
+      d="M20 62 L28 38 L38 52 L50 32 L62 52 L72 38 L80 62 H20 Z"
+      fill="#C99742"
+      stroke="#B08130"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
       strokeLinecap="round"
     />
+    
+    {/* Crown top circles (jewels) */}
+    <circle cx="50" cy="29" r="3.5" fill="#E4BF75" stroke="#B08130" strokeWidth="1" />
+    <circle cx="28" cy="35" r="3" fill="#E4BF75" stroke="#B08130" strokeWidth="1" />
+    <circle cx="72" cy="35" r="3" fill="#E4BF75" stroke="#B08130" strokeWidth="1" />
+    <circle cx="38" cy="49" r="2" fill="#E4BF75" />
+    <circle cx="62" cy="49" r="2" fill="#E4BF75" />
+    
+    {/* Crown Base Band with embedded gemstones */}
+    <rect x="18" y="62" width="64" height="7" rx="2" fill="#142820" stroke="#C99742" strokeWidth="1.5" />
+    <circle cx="30" cy="65.5" r="1.5" fill="#E4BF75" />
+    <circle cx="50" cy="65.5" r="2" fill="#C99742" />
+    <circle cx="70" cy="65.5" r="1.5" fill="#E4BF75" />
+
+    {/* Integrated AR text with gold stroke */}
+    <text
+      x="50"
+      y="92"
+      textAnchor="middle"
+      fill="#C99742"
+      fontSize="24"
+      fontWeight="900"
+      fontFamily="Playfair Display, Georgia, serif"
+      letterSpacing="1.5"
+    >
+      AR
+    </text>
   </svg>
 );
 

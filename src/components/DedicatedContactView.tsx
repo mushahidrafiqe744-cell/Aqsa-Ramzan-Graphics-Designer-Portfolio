@@ -129,9 +129,9 @@ export const DedicatedContactView: React.FC<DedicatedContactViewProps> = ({
               <div className="p-3.5 rounded-2xl bg-[#193228] border border-[#234234] hover:border-[#C99742] transition-colors hover:-translate-y-0.5">
                 <div className="flex items-center gap-2 text-[#C99742] mb-1">
                   <Calendar className="w-4 h-4" />
-                  <span className="text-[10px] font-bold uppercase text-[#A6BAAF]">Date</span>
+                  <span className="text-[10px] font-bold uppercase text-[#A6BAAF]">Date of Birth</span>
                 </div>
-                <p className="text-xs font-bold text-white font-mono">15/05/2025</p>
+                <p className="text-xs font-bold text-white font-mono">20-01-2010</p>
               </div>
             </div>
 
